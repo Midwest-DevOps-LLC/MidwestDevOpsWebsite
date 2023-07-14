@@ -1,0 +1,183 @@
+﻿@{
+    ViewData["Title"] = "Midwest DevOps, LLC";
+    ViewBag.Page = "Home";
+}
+    <div class="jumbotron text-center">
+        <h1>Midwest DevOps, LLC</h1>
+        <p>We specialize in website creation.</p>
+        <a href="WebsiteCalculator.php" target="_top" style="color:white"><p>Click here to use our Website Calculator.</p></a>
+    </div>
+    <!-- Container (About Section) -->
+    <div id="about" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>About Our Company</h2><br>
+                <h4>We are a small company based in the Midwest that develops and manages websites. We only hire the best to ensure that our products are up to our code. No pun intended.<br><br>We are affiliated with <a href="http://www.hostg.xyz/aff_ad?campaign_id=175&aff_id=2376&format=url" target="_blank">Hostinger</a> to host websites to increase stablilty of our websites.</h4><br>
+            </div>
+            <div class="col-sm-4" id="ttt">
+                <i class="fas fa-home fa-10x"></i>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-grey">
+        <div class="row">
+            <div class="col-sm-4" id="ttt">
+                <i class="fas fa-globe fa-10x"></i>
+            </div>
+            <div class="col-sm-8">
+                <h2>Our Values</h2><br>
+                <h4><strong>MISSION:</strong> Our mission is to help companies reach their audience through aesthetically pleasing and efficient websites on all platforms.</h4><br>
+            </div>
+        </div>
+    </div>
+    <!-- Container (Services Section) -->
+    <div id="services" class="container-fluid text-center">
+        <h2>SERVICES</h2>
+        <h4>What we offer</h4>
+        <br>
+        <div class="row slideanim">
+            <div class="col-sm-4">
+                <i class="fas fa-download fa-5x"></i>
+                <h4>BACKUPS</h4>
+                <p>We keep backups to ensure no pages would go missing.</p>
+            </div>
+            <div class="col-sm-4">
+                <i class="fas fa-bug fa-5x"></i>
+                <h4>BUG SQUASHING</h4>
+                <p>We don't expect you to pay for a product that has bugs in it.</p>
+            </div>
+            <div class="col-sm-4">
+                <i class="fas fa-clock fa-5x"></i>
+                <h4>Efficient</h4>
+                <p>We work in a timely manner in order to achieve the best possible website.</p>
+            </div>
+        </div>
+        <br><br>
+        <div class="row slideanim">
+            <div class="col-sm-4">
+                <i class="fab fa-microsoft fa-5x"></i>
+                <h4>CERTIFIED</h4>
+                <p>Websites are developed by a Microsoft certified developer.</p>
+            </div>
+            <div class="col-sm-4">
+                <i class="fas fa-info fa-5x"></i>
+                <h4>INFO</h4>
+                <p>You can contact us anytime and we would be glad to help.</p>
+            </div>
+            <div class="col-sm-4">
+                <i class="fas fa-briefcase fa-5x"></i>
+                <h4 style="color:#303030;">HARD WORK</h4>
+                <p>We won't stop working until the website meets our standards.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Container (Portfolio Section) -->
+    <div id="portfolio" class="container-fluid text-center bg-grey">
+        <h2>Portfolio</h2><br>
+        <h4>What we have created</h4>
+        <div class="row slideanim">
+            <center>
+                <a href="http://www.oc-doodles.com" target="_blank">
+                    <img class="rounded mx-auto d-block" src="Website OC Doodles.png" width="50%" height="50%" alt="OC Doodles">
+                    <h4>OC Doodles</h4>
+                </a>
+            </center>
+        </div>
+    </div>
+    <!-- Container (Pricing Section) -->
+    @*<div id="pricing" class="container-fluid">
+        <div class="text-center">
+            <h2>Website Calculator</h2>
+            <h4>Create a website that works for you</h4>
+        </div>
+        <div class="row slideanim">
+            <center><a href="WebsiteCalculator.php" target="_blank" id="ddd"><img src="WebsiteCalculator.png" alt="Website Calculator Link" class="img-rounded img-responsive"> </a></center>
+            <center><a href="WebsiteCalculator.php" target="_blank" id="ttt"><img src="WebsiteCalculatorOld.png" alt="Website Calculator Link" class="img-rounded img-responsive" width="50%" height="50%"> </a></center>
+            <!--<iframe class="hidden" style="width:100%; height:60em;" src="http://bedroomstudiosllc.com/WebsiteCalculator"></iframe>-->
+        </div>
+    </div>*@
+    <!-- Container (Contact Section) -->
+    <div id="contact" class="container-fluid bg-grey">
+        <h2 class="text-center">CONTACT</h2>
+        <div class="row">
+            <div class="col-sm-5">
+                <p>Contact us and we'll get back to you.</p>
+                <p><span class="glyphicon glyphicon-map-marker"></span> Springfield, MO</p>
+                <p><span class="glyphicon glyphicon-phone"></span> +1 417.413.7756</p>
+                <p><span class="glyphicon glyphicon-envelope"></span> midwestdevops@gmail.com</p>
+            </div>
+            <div class="col-sm-7 slideanim">
+                <form method="post" id="ContactForm">
+                    <div class="row" id="ContactValidation" style="display: none">
+                        <div class="col-sm-12">
+                            <div class="alert alert-danger" role="alert">
+                                There seem to be some errors
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="ContactSuccess" style="display: none">
+                        <div class="col-sm-12">
+                            <div class="alert alert-success" role="alert">
+                                We have recieved your comment
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="name" name="Name" placeholder="Name" type="text" required>
+                            <span id="name_error" style="display:none; color:red"></span>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="email" name="Email" placeholder="Email" type="email" required>
+                            <span id="email_error" style="display:none; color:red"></span>
+                        </div>
+                    </div>
+                    <textarea class="form-control" id="comments" name="Comment" placeholder="Comment" rows="5"></textarea><br>
+                    <span id="comments_error" style="display:none; color:red"></span>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <button class="btn btn-primary float-right" type="submit" onclick="SubmitContactForm(); return false;">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Add Google Maps -->
+    <div id="googleMap" style="">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d203449.1296493918!2d-93.43640900026928!3d37.179022046608985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87cf62f745c8983f%3A0x6bfd6cb31e690da0!2sSpringfield%2C+MO!5e0!3m2!1sen!2sus!4v1565987928621!5m2!1sen!2sus" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+
+
+    @section Scripts { 
+        <script>
+            function SubmitContactForm() {
+                SubmitForm('#ContactForm', '/Home/ContactUs', 'Post', '#ContactValidation', true, "NULL");
+            }
+
+            $(document).ready(function () {
+                $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+                    if (this.hash !== "") {
+                        event.preventDefault();
+                        var hash = this.hash;
+
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 900, function () {
+                            window.location.hash = hash;
+                        });
+                    }
+                });
+
+                $(window).scroll(function () {
+                    $(".slideanim").each(function () {
+                        var pos = $(this).offset().top;
+                        var winTop = $(window).scrollTop();
+                        if (pos < winTop + 600) {
+                            $(this).addClass("slide");
+                        }
+                    });
+                });
+            })
+        </script>
+    }

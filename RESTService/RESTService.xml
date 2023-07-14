@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RESTService</name>
+    </assembly>
+    <members>
+        <member name="M:RESTService.Controllers.EmployeeController.Get(System.Int32)">
+            <summary>
+            Gets an employee by employee id. Perm: Employee.GetEmployeeInformation
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.EmployeeController.GetAll(System.Nullable{System.Boolean})">
+            <summary>
+            Get all employees. Perm: Employee.View
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.EmployeeController.Put(MDO.RESTDataEntities.Standard.Employee)">
+            <summary>
+            Update or creates an employee. Returns the EmployeeID. Perm: Employee.CreateUpdate
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.api.ExternalApplicationController.GetAll">
+            <summary>
+            Gets a list of all of the external applications
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RESTService.Controllers.api.ExternalApplicationController.Get(System.Int32)">
+            <summary>
+            Gets an external application
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.api.ExternalApplicationController.Put(MDO.RESTDataEntities.Standard.ExternalApplication)">
+            <summary>
+            Update or creates an external application. Returns the ExternalApplicationID. Only MDO admins can access this endpoint
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.ExternalApplicationPermissionController.GetAll">
+            <summary>
+            Gets a list of all of the external application permissons
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RESTService.Controllers.ExternalApplicationPermissionController.GetAllExternalApplicationPermissionsByExternalApplicationID(System.Int32)">
+            <summary>
+            Gets a list of all of the external application permissons by external application id
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RESTService.Controllers.ExternalApplicationPermissionController.Get(System.Int32)">
+            <summary>
+            Gets an external application permission
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.ExternalApplicationPermissionController.Put(MDO.RESTDataEntities.Standard.ExternalApplication.Permission)">
+            <summary>
+            Update or creates an external application permission. Returns the ExternalApplicationPermissionID. Only MDO admins can access this endpoint
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.ExternalApplicationPermissionController.PutMultiple(System.Collections.Generic.List{MDO.RESTDataEntities.Standard.ExternalApplication.Permission})">
+            <summary>
+            Update or creates a list of ExternalApplicationPermissions. Returns the last ExternalApplicationPermissionID. Perm: UserPermission.CreateUpdate
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.LoginController.Post(MDO.RESTDataEntities.Standard.LoginRequest)">
+            <summary>
+            Login to a MDO site. Returns the auth key for you to use on session only requests
+            </summary>
+            <param name="loginRequest"></param>
+            <returns></returns>
+        </member>
+        <member name="M:RESTService.Controllers.PermissionController.GetAllPermissions">
+            <summary>
+            Gets a list of all of the permissions
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.PermissionController.GetAllDBPermissions">
+            <summary>
+            Gets a list of all of the permissions in a single dimension list
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.PermissionController.GetAllPermissionsByParentPermissionID(System.Int32)">
+            <summary>
+            Gets a parent permissions with its children
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.RegistrationController.Post(MDO.RESTDataEntities.Standard.RegisterRequest)">
+            <summary>
+            Regsiter a new user
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.RegistrationController.ResendVerificationEmail(System.String,System.String)">
+            <summary>
+            When a user goes to this page it will resend their activation email. TODO Make an endpoint to send a new verification for a new email for an existing user
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.RegistrationController.Verify(System.String,System.String)">
+            <summary>
+            When a user goes to this page it will set their user Activated status to true so that they can log in with their account
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.SessionController.Get">
+            <summary>
+            Get's a session by auth without updating it's session timer.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RESTService.Controllers.SessionController.Verify">
+            <summary>
+            Gets a session by auth and also updates it's session timer
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RESTService.Controllers.SiteController.GetAllSites(System.Nullable{System.Boolean})">
+            <summary>
+            Get all sites that you have access to. If you the the permission, Site.ViewAll, then you retreive all sites. If you are just a plain user, you will recieve only the ones you have access to
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.SiteController.Get(System.Int32)">
+            <summary>
+            Gets a site by site id. Returns data = null if there is none or there is no access
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.SiteController.Put(MDO.RESTDataEntities.Standard.Site)">
+             <summary>
+            Creates or updates a site based off if 'SiteID' has value. Perm: Site.Create
+             </summary>
+        </member>
+        <member name="M:RESTService.Controllers.SiteController.AddUser(MDO.RESTDataEntities.Standard.AddRemoveUserRequest)">
+            <summary>
+            Tries to add a user to a site. Returns a long value representing the siteuserid if was successful. Perm: Site.User.Add
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.SiteController.RemoveUser(MDO.RESTDataEntities.Standard.AddRemoveUserRequest)">
+            <summary>
+            Tries to remove a user from a site. Returns false if the user wasn't added to the site. Perm: Site.User.Remove
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.StatusController.Get">
+            <summary>
+            Endpoint for checking if the service is online
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RESTService.Controllers.ThirdPartyController.GetThirdParty(System.Int32)">
+            <summary>
+            Gets all third party accounts for the user ID. Only valid sessions can access their own account unless they have Perm: ThirdParty.GetAllByUser
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.UserController.GetName(System.Int32)">
+            <summary>
+            Gets the name fields from a user
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.UserPermissionController.GetAll">
+            <summary>
+            Gets a list of all of the user permissions. Perm: UserPermission.ViewAll
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RESTService.Controllers.UserPermissionController.GetAllUserPermissionsByUserID(System.Int32)">
+            <summary>
+            Gets a list of all of the user permissions by userID
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:RESTService.Controllers.UserPermissionController.Get(System.Int32)">
+            <summary>
+            Gets a user permission
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.UserPermissionController.UserHasPermission(System.Int32,System.Int32)">
+            <summary>
+            Returns true if the user has the permission
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.UserPermissionController.PutMultiple(System.Collections.Generic.List{MDO.RESTDataEntities.Standard.UserPermission})">
+            <summary>
+            Update or creates a list of userpermissions. Returns the last UserPermissionID. Perm: UserPermission.CreateUpdate
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.UserPermissionController.Put(MDO.RESTDataEntities.Standard.UserPermission)">
+            <summary>
+            Update or creates a userpermission. Returns the UserPermissionID. Perm: UserPermission.CreateUpdate
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.UserPermissionController.RemoveUserPermission(MDO.RESTDataEntities.Standard.DeleteUserPermissionRequest)">
+            <summary>
+            Tries to remove a permission from a user. Returns false if the permission wasn't added to the user. Perm: UserPermission.Remove
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.ThirdParty.SpotifyController.Get(System.Int32)">
+            <summary>
+            Confirms that a MDO account has a Spotify account linked
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.ThirdParty.SpotifyController.GetMe(System.Int32)">
+            <summary>
+            Get the spotify user account. Only valid sessions can access their own account
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.ThirdParty.SpotifyController.GetMeToken(System.Int32)">
+            <summary>
+            Get the spotify user's token. Only valid sessions can access their own account
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.ThirdParty.SpotifyController.CurrentlyPlaying(System.Int32)">
+            <summary>
+            Get the currently playing track. Only valid sessions can access their own account
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.ThirdParty.SpotifyController.RecentlyPlayed(System.Int32)">
+            <summary>
+            Get a list of recently played tracks. Only valid sessions can access their own account
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.ThirdParty.SpotifyController.Search(System.Int32,System.String,MDO.ThirdParty.Spotify.Standard.EndPoints.SearchAPI.QueryType)">
+            <summary>
+            Get a list of tracks or artists. Only valid sessions can access their own account
+            </summary>
+        </member>
+        <member name="M:RESTService.Controllers.ThirdParty.SpotifyController.AddTrackToEndOfQueue(System.Int32,System.String)">
+            <summary>
+            Adds a track to the end of the queue. Only valid sessions can access their own account
+            </summary>
+        </member>
+    </members>
+</doc>

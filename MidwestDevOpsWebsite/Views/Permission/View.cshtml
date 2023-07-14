@@ -1,0 +1,58 @@
+﻿@model List<MDO.RESTDataEntities.Standard.Permission>
+
+@{
+    ViewData["Title"] = "Permission - ";
+    ViewBag.Page = "Permission";
+    var userSession = (MDO.RESTDataEntities.Standard.UserSession)ViewBag.UserSession;
+
+    var isMDOEmployee = ViewBag.UserSession != null && ViewBag.UserSession.IsMDOEmployee;
+    var isMDOAdmin = ViewBag.UserSession != null && ViewBag.UserSession.IsMDOAdmin;
+}
+
+<div class="container-fluid bg-grey">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" style="background-color:white; border-radius:.25em; padding:2em;">
+            <h1>Permission - New</h1>
+            <hr />
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="tree"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+
+        $(document).ready(function () {
+            Load();
+        });
+
+        function SubmitUserInfoForm() {
+            SubmitForm('#frmUserInfo', '/Employee/Save', 'Post', '#UserInfoValidation', false, 'NULL');
+        }
+
+        function Load() {
+            $.ajax({
+                url: '/Permission/GetPerms',
+                type: 'GET',
+                success: function (result) {
+                    $('#tree').bstreeview({ data: result });
+                },
+                error: function (result) {
+
+                }
+            });
+        }
+
+        function ReloadPage() {
+            window.location = window.location;
+        }
+    </script>
+}

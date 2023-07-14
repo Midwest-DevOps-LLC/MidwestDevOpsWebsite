@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DataEntities</name>
+    </assembly>
+    <members>
+        <member name="T:DataEntities.BaseEntity">
+            <summary>
+            test
+            </summary>
+        </member>
+    </members>
+</doc>

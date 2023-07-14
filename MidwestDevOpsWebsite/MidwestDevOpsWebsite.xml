@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MidwestDevOpsWebsite</name>
+    </assembly>
+    <members>
+        <member name="M:MidwestDevOpsWebsite.Controllers.LoginController.Login(MidwestDevOpsWebsite.Models.LoginModel)">
+            <summary>
+            Login in something
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="T:MidwestDevOpsWebsite.Models.ValidationModel">
+            <summary>
+            This is the model the interacts with front and back end
+            </summary>
+        </member>
+        <member name="P:MidwestDevOpsWebsite.Models.ValidationModel.ValidationModalMessage">
+            <summary>
+            This is a test
+            </summary>
+            <remarks>
+            remarks
+            </remarks>
+            <value>
+            value
+            </value>
+            <example>
+            example
+            </example>
+            <exception cref="T:System.IndexOutOfRangeException"></exception>
+        </member>
+    </members>
+</doc>

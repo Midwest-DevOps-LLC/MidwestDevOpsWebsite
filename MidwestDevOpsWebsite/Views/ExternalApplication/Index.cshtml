@@ -1,0 +1,58 @@
+﻿@model List<MDO.RESTDataEntities.Standard.ExternalApplication>
+
+@{
+    ViewData["Title"] = "External Apps";
+    ViewBag.Page = "ExternalApplication";
+}
+
+<div class="container-fluid bg-grey">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" style="background-color:white; border-radius:.25em; padding:2em;">
+            <h1>External Applications</h1>
+            <hr />
+            <br />
+            <br />
+
+            <button class="btn btn-success float-right" onclick="window.location = '/ExternalApplication/View/'"><i class="fas fa-plus" style="color:white"></i></button>
+
+            @foreach (var m in Model) {
+                <div class="row">
+                    <div class="showOnSmall col-md-2">
+                        <h2>@m.Name</h2>
+                        <hr />
+                    </div>
+                    @*<div class="col-md-6">
+                        <img src="@m.ProductMainPicture" alt="@m.ProductName" class="img-fluid"/>
+                    </div>*@
+                    <div class="col-md-6">
+                        <h2 class="hideOnSmall">@m.Name</h2>
+                        <h3>@m.Description</h3>
+                        <div style="margin-top: 5em;">
+                            <button class="btn btn-primary float-right" type="submit" style="position:absolute; bottom:0; right:0" onclick="window.location = '/ExternalApplication/View/@m.ID'">View @m.Name</button>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+
+
+@*@section Scripts {
+    <script>
+        function SubmitUserInfoForm() {
+            SubmitForm('#frmUserInfo', '/User/UserInfo', 'Post', '#UserInfoValidation', false, 'NULL');
+        }
+
+        function SubmitSecurityForm() {
+            SubmitForm('#frmSecurity', '/User/AccountSecurity', 'Post', '#UserSecurityValidation', true, 'NULL');
+        }
+
+        function ReloadPage() {
+            window.location = window.location;
+        }
+    </script>
+}*@

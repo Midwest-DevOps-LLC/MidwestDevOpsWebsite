@@ -1,0 +1,77 @@
+﻿@model MidwestDevOpsWebsite.Models.EmployeeViewModel
+
+@{
+    ViewData["Title"] = "Employee - " + Model.Name;
+    ViewBag.Page = "Employee";
+    var userSession = (MDO.RESTDataEntities.Standard.UserSession)ViewBag.UserSession;
+
+    var isMDOEmployee = ViewBag.UserSession != null && ViewBag.UserSession.IsMDOEmployee;
+    var isMDOAdmin = ViewBag.UserSession != null && ViewBag.UserSession.IsMDOAdmin;
+}
+
+<div class="container-fluid bg-grey">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" style="background-color:white; border-radius:.25em; padding:2em;">
+            <h1>Employee - @Model.Name</h1>
+            <hr />
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Employee Information</h3>
+                    <hr />
+                    <form id="frmUserInfo">
+                        <input type="hidden" name="EmployeeID" value="@Model.Employee.EmployeeID" />
+                        <div class="row" id="UserInfoValidation" style="display: none">
+                            <div class="col-sm-12">
+                                <div class="alert alert-danger" role="alert">
+                                    Username / password is incorrect
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="title">Title</label>
+                            <input @(isMDOAdmin ? "" : "disabled") type="text" class="form-control" id="title" name="Title" placeholder="Title" value="@Model.Employee.Title">
+                        </div>
+                        <span id="title_error" style="display:none; color:red"></span>
+
+                        @if (isMDOAdmin)
+                        {
+                            <div class="form-group">
+                                <label for="hireDate">Hire Date</label>
+                                <input @(isMDOAdmin ? "" : "disabled") type="date" class="form-control" id="hireDate" name="HireDate" placeholder="HireDate" value="@Model.Employee.HireDate.ToString("yyyy-MM-dd")">
+                            </div>
+                            <span id="hireDate_error" style="display:none; color:red"></span>
+                        }
+
+
+
+                        <div class="form-group">
+                            <button class="btn btn-primary float-right" type="submit" onclick="SubmitUserInfoForm(); return false;">Update</button>
+                        </div>
+                        <p>Hired on: @Model.Employee.HireDate.ToString("yyyy-MM-dd")</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script>
+        function SubmitUserInfoForm() {
+            SubmitForm('#frmUserInfo', '/Employee/Save', 'Post', '#UserInfoValidation', false, 'NULL');
+        }
+
+        //function SubmitSecurityForm() {
+        //    SubmitForm('#frmSecurity', '/User/AccountSecurity', 'Post', '#UserSecurityValidation', true, 'NULL');
+        //}
+
+        function ReloadPage() {
+            window.location = window.location;
+        }
+    </script>
+}

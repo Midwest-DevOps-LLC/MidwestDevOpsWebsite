@@ -1,0 +1,610 @@
+# 3/9/2021 7:58:42 PM #
+Exception Occured in MDO Utility
+Could not find specified column in results: ModifiedDate   at MySql.Data.MySqlClient.ResultSet.GetOrdinal(String name)
+   at MySql.Data.MySqlClient.MySqlDataReader.GetOrdinal(String name)
+   at RESTDLL.DBUtilities.ReturnSafeDateTime(MySqlDataReader reader, String columnName) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\DBManager.cs:line 70
+   at RESTDLL.UserSessions.ConvertMySQLToEntity(MySqlDataReader reader) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\UserSessions.cs:line 152
+   at RESTDLL.UserSessions.GetUserSessionByToken(String email) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\UserSessions.cs:line 98
+   at RESTBLL.UserSessions.GetUserSessionByToken(String token) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\UserSessions.cs:line 59MySql.DataInt32 GetOrdinal(System.String)
+# 3/9/2021 8:00:03 PM #
+Exception Occured in MDO Utility
+Could not find specified column in results: ModifiedDate   at MySql.Data.MySqlClient.ResultSet.GetOrdinal(String name)
+   at MySql.Data.MySqlClient.MySqlDataReader.GetOrdinal(String name)
+   at RESTDLL.DBUtilities.ReturnSafeDateTime(MySqlDataReader reader, String columnName) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\DBManager.cs:line 70
+   at RESTDLL.UserSessions.ConvertMySQLToEntity(MySqlDataReader reader) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\UserSessions.cs:line 152
+   at RESTDLL.UserSessions.GetUserSessionByToken(String email) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\UserSessions.cs:line 98
+   at RESTBLL.UserSessions.GetUserSessionByToken(String token) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\UserSessions.cs:line 59MySql.DataInt32 GetOrdinal(System.String)
+# 3/10/2021 12:37:29 AM #
+Couldn't find username by: f
+# 3/10/2021 12:38:02 AM #
+Couldn't find username by: f
+# 3/10/2021 12:38:20 AM #
+Couldn't find username by: f
+# 3/10/2021 12:54:14 AM #
+Couldn't find username by: m
+# 3/10/2021 12:54:57 AM #
+Couldn't find username by: m
+# 3/10/2021 12:55:55 AM #
+Couldn't find username by: m
+# 3/10/2021 12:58:58 AM #
+Couldn't find username by: m
+# 3/10/2021 12:59:37 AM #
+Couldn't find username by: f
+# 3/10/2021 1:00:40 AM #
+Couldn't find username by: f
+# 3/10/2021 2:44:36 AM #
+Exception Occured in MDO Utility
+Column 'UserID' in where clause is ambiguous   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at RESTDLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\UserSessions.cs:line 116
+   at RESTBLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\UserSessions.cs:line 77MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/10/2021 2:44:52 AM #
+Exception Occured in MDO Utility
+Column 'UserID' in where clause is ambiguous   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at RESTDLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\UserSessions.cs:line 116
+   at RESTBLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\UserSessions.cs:line 77MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/10/2021 2:46:15 AM #
+Exception Occured in MDO Utility
+Column 'UserID' in where clause is ambiguous   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at RESTDLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\UserSessions.cs:line 116
+   at RESTBLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\UserSessions.cs:line 77MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/10/2021 2:46:20 AM #
+Exception Occured in MDO Utility
+Column 'UserID' in where clause is ambiguous   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at RESTDLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\UserSessions.cs:line 116
+   at RESTBLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\UserSessions.cs:line 77MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/10/2021 2:52:39 AM #
+Exception Occured in MDO Utility
+Column 'UserID' in where clause is ambiguous   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at RESTDLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\UserSessions.cs:line 116
+   at RESTBLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\UserSessions.cs:line 77MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/10/2021 2:52:40 AM #
+Exception Occured in MDO Utility
+Column 'UserID' in where clause is ambiguous   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at RESTDLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\UserSessions.cs:line 116
+   at RESTBLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\UserSessions.cs:line 77MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/10/2021 2:53:35 AM #
+Exception Occured in MDO Utility
+Column 'UserID' in where clause is ambiguous   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at RESTDLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\UserSessions.cs:line 116
+   at RESTBLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\UserSessions.cs:line 77MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/10/2021 2:54:00 AM #
+Exception Occured in MDO Utility
+Column 'UserID' in where clause is ambiguous   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at RESTDLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\UserSessions.cs:line 116
+   at RESTBLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\UserSessions.cs:line 77MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/10/2021 2:55:30 AM #
+Exception Occured in MDO Utility
+Column 'UserID' in where clause is ambiguous   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at RESTDLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\UserSessions.cs:line 116
+   at RESTBLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\UserSessions.cs:line 77MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/10/2021 2:55:30 AM #
+Exception Occured in MDO Utility
+Column 'UserID' in where clause is ambiguous   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at RESTDLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\UserSessions.cs:line 116
+   at RESTBLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\UserSessions.cs:line 77MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/10/2021 2:55:36 AM #
+Exception Occured in MDO Utility
+Column 'UserID' in where clause is ambiguous   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at RESTDLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\UserSessions.cs:line 116
+   at RESTBLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\UserSessions.cs:line 77MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/10/2021 2:55:43 AM #
+Exception Occured in MDO Utility
+Column 'UserID' in where clause is ambiguous   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at RESTDLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\UserSessions.cs:line 116
+   at RESTBLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\UserSessions.cs:line 77MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/10/2021 2:55:47 AM #
+Exception Occured in MDO Utility
+Column 'UserID' in where clause is ambiguous   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at RESTDLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\UserSessions.cs:line 116
+   at RESTBLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\UserSessions.cs:line 77MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/10/2021 2:55:57 AM #
+Exception Occured in MDO Utility
+Column 'UserID' in where clause is ambiguous   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at RESTDLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\UserSessions.cs:line 116
+   at RESTBLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\UserSessions.cs:line 77MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/10/2021 2:56:08 AM #
+Exception Occured in MDO Utility
+Column 'UserID' in where clause is ambiguous   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at RESTDLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\UserSessions.cs:line 116
+   at RESTBLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\UserSessions.cs:line 77MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/10/2021 2:56:19 AM #
+Exception Occured in MDO Utility
+Column 'UserID' in where clause is ambiguous   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at RESTDLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\UserSessions.cs:line 116
+   at RESTBLL.UserSessions.GetAllUserSessionByUserID(Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\UserSessions.cs:line 77MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/11/2021 10:13:11 PM #
+Exception Occured in MDO Utility
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where Active = 1' at line 1   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at RESTDLL.Sites.GetAllSites(Nullable`1 active) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\Sites.cs:line 62
+   at RESTBLL.Sites.GetAllSites(Nullable`1 active) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\Sites.cs:line 29MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/11/2021 10:13:18 PM #
+Exception Occured in MDO Utility
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where Active = 0' at line 1   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at RESTDLL.Sites.GetAllSites(Nullable`1 active) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\Sites.cs:line 62
+   at RESTBLL.Sites.GetAllSites(Nullable`1 active) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\Sites.cs:line 29MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/11/2021 10:14:01 PM #
+Exception Occured in MDO Utility
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where Active = 0' at line 1   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at RESTDLL.Sites.GetAllSites(Nullable`1 active) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\Sites.cs:line 62
+   at RESTBLL.Sites.GetAllSites(Nullable`1 active) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\Sites.cs:line 29MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/11/2021 10:14:33 PM #
+Exception Occured in MDO Utility
+You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where Active = 1' at line 1   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at RESTDLL.Sites.GetAllSites(Nullable`1 active) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\Sites.cs:line 62
+   at RESTBLL.Sites.GetAllSites(Nullable`1 active) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\Sites.cs:line 29MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/11/2021 11:34:29 PM #
+Exception Occured in MDO Utility
+Unknown column 'Active' in 'where clause'   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at RESTDLL.Employees.GetAllEmployees(Nullable`1 active) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\Employees.cs:line 62
+   at RESTBLL.Employees.GetAllEmployees(Nullable`1 active) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\Employees.cs:line 27MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/11/2021 11:39:08 PM #
+Exception Occured in MDO Utility
+Field 'Admin' doesn't have a default value   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteScalar()
+   at RESTDLL.Employees.SaveEmployee(Employee p) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\Employees.cs:line 145
+   at RESTBLL.Employees.SaveEmployee(Employee userSession) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\Employees.cs:line 82MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/11/2021 11:39:22 PM #
+Exception Occured in MDO Utility
+Field 'Admin' doesn't have a default value   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteScalar()
+   at RESTDLL.Employees.SaveEmployee(Employee p) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\Employees.cs:line 145
+   at RESTBLL.Employees.SaveEmployee(Employee userSession) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\Employees.cs:line 82MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/11/2021 11:42:29 PM #
+Exception Occured in MDO Utility
+Field 'Admin' doesn't have a default value   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteScalar()
+   at RESTDLL.Employees.SaveEmployee(Employee p) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\Employees.cs:line 145
+   at RESTBLL.Employees.SaveEmployee(Employee userSession) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\Employees.cs:line 82MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 3/13/2021 5:51:24 PM #
+Couldn't find username by: mark.muelle
+# 3/13/2021 5:56:21 PM #
+Couldn't find username by: mark.muell
+# 3/23/2021 5:09:35 PM #
+Exception Occured in MDO Utility
+Failure sending mail.   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at MDO.Utility.Standard.EmailHandler.SendEmail(EmailAddresses fromAddress, String toAddress, String fromPassword, String subject, String body, Boolean isHtml)System.Net.MailSystem.Net.Internals.SocketExceptionFactory+ExtendedSocketException (10060): A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond. [::ffff:67.205.168.131]:587
+   at System.Net.Sockets.Socket.DoConnect(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Connect(EndPoint remoteEP)
+   at System.Net.Sockets.TcpClient.Connect(IPEndPoint remoteEP)
+   at System.Net.Sockets.TcpClient.Connect(String hostname, Int32 port)
+--- End of stack trace from previous location ---
+   at System.Net.Sockets.TcpClient.Connect(String hostname, Int32 port)
+   at System.Net.Mail.SmtpConnection.GetConnection(String host, Int32 port)
+   at System.Net.Mail.SmtpTransport.GetConnection(String host, Int32 port)
+   at System.Net.Mail.SmtpClient.GetConnection()
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)Void Send(System.Net.Mail.MailMessage)
+# 4/13/2021 2:47:28 AM #
+Couldn't find username by: f
+# 4/13/2021 2:49:29 AM #
+Couldn't find username by: mmueller
+# 4/13/2021 2:57:23 AM #
+Exception Occured in MDO Utility
+Object reference not set to an instance of an object.   at RESTBLL.Sites.AddUser(Int32 siteID, Int32 userID) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\Sites.cs:line 153RESTBLLSystem.Nullable`1[System.Int64] AddUser(Int32, Int32)
+# 7/17/2021 6:21:37 PM #
+Exception Occured in MDO Utility
+The remote server returned an error: (400) Bad Request.   at System.Net.HttpWebRequest.GetResponse()
+   at MDO.Utility.Standard.RestClient.PostRequest(String json)
+   at MDO.Utility.Standard.EmailHandler.SendEmail(EmailAddresses fromAddress, String toAddress, String fromPassword, String subject, String body, Boolean isHtml)System.Net.RequestsSystem.Net.WebResponse GetResponse()
+# 7/17/2021 6:24:53 PM #
+Exception Occured in MDO Utility
+The remote server returned an error: (400) Bad Request.   at System.Net.HttpWebRequest.GetResponse()
+   at MDO.Utility.Standard.RestClient.PostRequest(String json)
+   at MDO.Utility.Standard.EmailHandler.SendEmail(EmailAddresses fromAddress, String toAddress, String fromPassword, String subject, String body, Boolean isHtml)System.Net.RequestsSystem.Net.WebResponse GetResponse()
+# 7/17/2021 6:29:44 PM #
+Exception Occured in MDO Utility
+The remote server returned an error: (400) Bad Request.   at System.Net.HttpWebRequest.GetResponse()
+   at MDO.Utility.Standard.RestClient.PostRequest(String json)
+   at MDO.Utility.Standard.EmailHandler.SendEmail(EmailAddresses fromAddress, String toAddress, String fromPassword, String subject, String body, Boolean isHtml)System.Net.RequestsSystem.Net.WebResponse GetResponse()
+# 7/17/2021 6:30:12 PM #
+Exception Occured in MDO Utility
+The remote server returned an error: (400) Bad Request.   at System.Net.HttpWebRequest.GetResponse()
+   at MDO.Utility.Standard.RestClient.PostRequest(String json)
+   at MDO.Utility.Standard.EmailHandler.SendEmail(EmailAddresses fromAddress, String toAddress, String fromPassword, String subject, String body, Boolean isHtml)System.Net.RequestsSystem.Net.WebResponse GetResponse()
+# 7/17/2021 6:32:27 PM #
+Exception Occured in MDO Utility
+The remote server returned an error: (400) Bad Request.   at System.Net.HttpWebRequest.GetResponse()
+   at MDO.Utility.Standard.RestClient.PostRequest(String json)
+   at MDO.Utility.Standard.EmailHandler.SendEmail(EmailAddresses fromAddress, String toAddress, String fromPassword, String subject, String body, Boolean isHtml)System.Net.RequestsSystem.Net.WebResponse GetResponse()
+# 7/17/2021 6:32:33 PM #
+Exception Occured in MDO Utility
+The remote server returned an error: (400) Bad Request.   at System.Net.HttpWebRequest.GetResponse()
+   at MDO.Utility.Standard.RestClient.PostRequest(String json)
+   at MDO.Utility.Standard.EmailHandler.SendEmail(EmailAddresses fromAddress, String toAddress, String fromPassword, String subject, String body, Boolean isHtml)System.Net.RequestsSystem.Net.WebResponse GetResponse()
+# 7/17/2021 6:39:57 PM #
+Sending email request: {"Name":"Email sent via API","Sender":{"Name":"Midwest DevOps, LLC","Email":"noreply@midwestdevops.com"},"type":"classic","To":{"Name":null,"Email":"1998markmueller@gmail.com"},"Subject":"Verify Email - Midwest DevOps, LLC","HTMLContent":"\r\n                <html xmlns='http://www.w3.org/1999/xhtml'>\r\n                <head>\r\n                <title>Registration - Midwest DevOps, LLC</title>\r\n                <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />\r\n                <meta http-equiv='X-UA-Compatible' content='IE=edge' />\r\n                <meta name = 'viewport' content='width=device-width, initial-scale=1.0 ' />\r\n                <style>\r\n                    body {\r\n                        background-color: #1FA89C;\r\n                        bgcolor: #1FA89C;\r\n                    }\r\n                </style>\r\n                </head>\r\n                <body style='background-color: #1FA89C; bgcolor: #1FA89C;' bgcolor='#1FA89C; border-radius:.25em;'>\r\n                    <div style='background-color: #1FA89C; bgcolor: #1FA89C;' bgcolor='#1FA89C'>\r\n                        <h1 style='text-align:center; color:white'; padding:10em; padding-top:2em;>Midwest DevOps, LLC</h1>\r\n                        <div style='padding:7em; color:white; text-align:center'>\r\n                            You have created an account at <a href='midwestdevops.com'>Midwest DevOps, LLC</a><br><br>\r\n                            Click <a href='https://localhost:44350/api/Registration/Verify?GUID=67d673b9-bbf2-4fa8-8f1c-ed6e24dfdf18&Application=825d53c9-df35-451f-b668-76b467e5f54b'>here</a> to activate your email<br><br><br><br>\r\n                            <p style='color:lightgrey'>If you didn't create this account, ignore this email</p>\r\n                        </div>\r\n                    </div>\r\n                </body>\r\n                </html>\r\n            "}
+# 7/17/2021 6:44:04 PM #
+Sending email request: {"name":"Email sent via API","sender":{"name":"Midwest DevOps, LLC","email":"noreply@midwestdevops.com"},"type":"classic","to":{"name":null,"email":"1998markmueller@gmail.com"},"subject":"Verify Email - Midwest DevOps, LLC","htmlContent":"\r\n                <html xmlns='http://www.w3.org/1999/xhtml'>\r\n                <head>\r\n                <title>Registration - Midwest DevOps, LLC</title>\r\n                <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />\r\n                <meta http-equiv='X-UA-Compatible' content='IE=edge' />\r\n                <meta name = 'viewport' content='width=device-width, initial-scale=1.0 ' />\r\n                <style>\r\n                    body {\r\n                        background-color: #1FA89C;\r\n                        bgcolor: #1FA89C;\r\n                    }\r\n                </style>\r\n                </head>\r\n                <body style='background-color: #1FA89C; bgcolor: #1FA89C;' bgcolor='#1FA89C; border-radius:.25em;'>\r\n                    <div style='background-color: #1FA89C; bgcolor: #1FA89C;' bgcolor='#1FA89C'>\r\n                        <h1 style='text-align:center; color:white'; padding:10em; padding-top:2em;>Midwest DevOps, LLC</h1>\r\n                        <div style='padding:7em; color:white; text-align:center'>\r\n                            You have created an account at <a href='midwestdevops.com'>Midwest DevOps, LLC</a><br><br>\r\n                            Click <a href='https://localhost:44350/api/Registration/Verify?GUID=c5d54b90-82f4-45f8-9d50-9c1d2e5c1d2b&Application=825d53c9-df35-451f-b668-76b467e5f54b'>here</a> to activate your email<br><br><br><br>\r\n                            <p style='color:lightgrey'>If you didn't create this account, ignore this email</p>\r\n                        </div>\r\n                    </div>\r\n                </body>\r\n                </html>\r\n            "}
+# 7/17/2021 6:47:35 PM #
+Sending email request: {"name":"Email sent via API","sender":{"name":"Midwest DevOps, LLC","email":"noreply@midwestdevops.com"},"type":"classic","to":{"name":"1998markmueller@gmail.com","email":"1998markmueller@gmail.com"},"subject":"Verify Email - Midwest DevOps, LLC","htmlContent":"\r\n                <html xmlns='http://www.w3.org/1999/xhtml'>\r\n                <head>\r\n                <title>Registration - Midwest DevOps, LLC</title>\r\n                <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />\r\n                <meta http-equiv='X-UA-Compatible' content='IE=edge' />\r\n                <meta name = 'viewport' content='width=device-width, initial-scale=1.0 ' />\r\n                <style>\r\n                    body {\r\n                        background-color: #1FA89C;\r\n                        bgcolor: #1FA89C;\r\n                    }\r\n                </style>\r\n                </head>\r\n                <body style='background-color: #1FA89C; bgcolor: #1FA89C;' bgcolor='#1FA89C; border-radius:.25em;'>\r\n                    <div style='background-color: #1FA89C; bgcolor: #1FA89C;' bgcolor='#1FA89C'>\r\n                        <h1 style='text-align:center; color:white'; padding:10em; padding-top:2em;>Midwest DevOps, LLC</h1>\r\n                        <div style='padding:7em; color:white; text-align:center'>\r\n                            You have created an account at <a href='midwestdevops.com'>Midwest DevOps, LLC</a><br><br>\r\n                            Click <a href='https://localhost:44350/api/Registration/Verify?GUID=66343382-de70-43d4-8c82-c1831893b1db&Application=825d53c9-df35-451f-b668-76b467e5f54b'>here</a> to activate your email<br><br><br><br>\r\n                            <p style='color:lightgrey'>If you didn't create this account, ignore this email</p>\r\n                        </div>\r\n                    </div>\r\n                </body>\r\n                </html>\r\n            "}
+# 7/17/2021 6:47:41 PM #
+Exception Occured in MDO Utility
+The remote server returned an error: (400) Bad Request.   at System.Net.HttpWebRequest.GetResponse()
+   at MDO.Utility.Standard.RestClient.PostRequest(String json)
+   at MDO.Utility.Standard.EmailHandler.SendEmail(EmailAddresses fromAddress, String toAddress, String fromPassword, String subject, String body, Boolean isHtml)System.Net.RequestsSystem.Net.WebResponse GetResponse()
+# 7/17/2021 6:51:36 PM #
+Sending email request: {"name":"Email sent via API","sender":{"name":"Midwest DevOps, LLC","email":"noreply@midwestdevops.com"},"type":"classic","to":{"name":"1998markmueller@gmail.com","email":"1998markmueller@gmail.com"},"subject":"Verify Email - Midwest DevOps, LLC","htmlContent":"\r\n                <html xmlns='http://www.w3.org/1999/xhtml'>\r\n                <head>\r\n                <title>Registration - Midwest DevOps, LLC</title>\r\n                <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />\r\n                <meta http-equiv='X-UA-Compatible' content='IE=edge' />\r\n                <meta name = 'viewport' content='width=device-width, initial-scale=1.0 ' />\r\n                <style>\r\n                    body {\r\n                        background-color: #1FA89C;\r\n                        bgcolor: #1FA89C;\r\n                    }\r\n                </style>\r\n                </head>\r\n                <body style='background-color: #1FA89C; bgcolor: #1FA89C;' bgcolor='#1FA89C; border-radius:.25em;'>\r\n                    <div style='background-color: #1FA89C; bgcolor: #1FA89C;' bgcolor='#1FA89C'>\r\n                        <h1 style='text-align:center; color:white'; padding:10em; padding-top:2em;>Midwest DevOps, LLC</h1>\r\n                        <div style='padding:7em; color:white; text-align:center'>\r\n                            You have created an account at <a href='midwestdevops.com'>Midwest DevOps, LLC</a><br><br>\r\n                            Click <a href='https://localhost:44350/api/Registration/Verify?GUID=06b32486-c541-48f8-80f4-7996ba61cf06&Application=825d53c9-df35-451f-b668-76b467e5f54b'>here</a> to activate your email<br><br><br><br>\r\n                            <p style='color:lightgrey'>If you didn't create this account, ignore this email</p>\r\n                        </div>\r\n                    </div>\r\n                </body>\r\n                </html>\r\n            "}
+# 7/17/2021 6:56:36 PM #
+Sending email request: {"name":"Email sent via API","sender":{"name":"Midwest DevOps, LLC","email":"noreply@midwestdevops.com"},"type":"classic","to":[{"name":"1998markmueller@gmail.com","email":"1998markmueller@gmail.com"}],"subject":"Verify Email - Midwest DevOps, LLC","htmlContent":"\r\n                <html xmlns='http://www.w3.org/1999/xhtml'>\r\n                <head>\r\n                <title>Registration - Midwest DevOps, LLC</title>\r\n                <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />\r\n                <meta http-equiv='X-UA-Compatible' content='IE=edge' />\r\n                <meta name = 'viewport' content='width=device-width, initial-scale=1.0 ' />\r\n                <style>\r\n                    body {\r\n                        background-color: #1FA89C;\r\n                        bgcolor: #1FA89C;\r\n                    }\r\n                </style>\r\n                </head>\r\n                <body style='background-color: #1FA89C; bgcolor: #1FA89C;' bgcolor='#1FA89C; border-radius:.25em;'>\r\n                    <div style='background-color: #1FA89C; bgcolor: #1FA89C;' bgcolor='#1FA89C'>\r\n                        <h1 style='text-align:center; color:white'; padding:10em; padding-top:2em;>Midwest DevOps, LLC</h1>\r\n                        <div style='padding:7em; color:white; text-align:center'>\r\n                            You have created an account at <a href='midwestdevops.com'>Midwest DevOps, LLC</a><br><br>\r\n                            Click <a href='https://localhost:44350/api/Registration/Verify?GUID=bdc7ae08-28c4-4db6-add9-0ff1d0c5fb35&Application=825d53c9-df35-451f-b668-76b467e5f54b'>here</a> to activate your email<br><br><br><br>\r\n                            <p style='color:lightgrey'>If you didn't create this account, ignore this email</p>\r\n                        </div>\r\n                    </div>\r\n                </body>\r\n                </html>\r\n            "}
+# 7/17/2021 6:56:50 PM #
+Recieved bad code from email api
+{"code":"missing_parameter","message":"No input in body"}
+# 7/17/2021 6:58:20 PM #
+Sending email request: {"name":"Email sent via API","sender":{"name":"Midwest DevOps, LLC","email":"noreply@midwestdevops.com"},"type":"classic","to":[{"name":"1998markmueller@gmail.com","email":"1998markmueller@gmail.com"}],"subject":"Verify Email - Midwest DevOps, LLC","htmlContent":"\r\n                <html xmlns='http://www.w3.org/1999/xhtml'>\r\n                <head>\r\n                <title>Registration - Midwest DevOps, LLC</title>\r\n                <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />\r\n                <meta http-equiv='X-UA-Compatible' content='IE=edge' />\r\n                <meta name = 'viewport' content='width=device-width, initial-scale=1.0 ' />\r\n                <style>\r\n                    body {\r\n                        background-color: #1FA89C;\r\n                        bgcolor: #1FA89C;\r\n                    }\r\n                </style>\r\n                </head>\r\n                <body style='background-color: #1FA89C; bgcolor: #1FA89C;' bgcolor='#1FA89C; border-radius:.25em;'>\r\n                    <div style='background-color: #1FA89C; bgcolor: #1FA89C;' bgcolor='#1FA89C'>\r\n                        <h1 style='text-align:center; color:white'; padding:10em; padding-top:2em;>Midwest DevOps, LLC</h1>\r\n                        <div style='padding:7em; color:white; text-align:center'>\r\n                            You have created an account at <a href='midwestdevops.com'>Midwest DevOps, LLC</a><br><br>\r\n                            Click <a href='https://localhost:44350/api/Registration/Verify?GUID=68e5b536-78fc-4993-aeb6-c6f3a646961b&Application=825d53c9-df35-451f-b668-76b467e5f54b'>here</a> to activate your email<br><br><br><br>\r\n                            <p style='color:lightgrey'>If you didn't create this account, ignore this email</p>\r\n                        </div>\r\n                    </div>\r\n                </body>\r\n                </html>\r\n            "}
+# 7/17/2021 6:58:22 PM #
+Recieved bad code from email api
+{"code":"missing_parameter","message":"No input in body"}
+# 7/18/2021 1:36:16 AM #
+Sending email request: {
+  "personalizations": [
+    {
+      "to": [
+        {
+          "name": null,
+          "email": "1998markmueller@gmail.com"
+        }
+      ]
+    }
+  ],
+  "from": {
+    "email": "noreply@midwestdevops.com"
+  },
+  "subject": "Verify Email - Midwest DevOps, LLC",
+  "content": [
+    {
+      "type": "text/html",
+      "value": "\r\n                <html xmlns='http://www.w3.org/1999/xhtml'>\r\n                <head>\r\n                <title>Registration - Midwest DevOps, LLC</title>\r\n                <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />\r\n                <meta http-equiv='X-UA-Compatible' content='IE=edge' />\r\n                <meta name = 'viewport' content='width=device-width, initial-scale=1.0 ' />\r\n                <style>\r\n                    body {\r\n                        background-color: #1FA89C;\r\n                        bgcolor: #1FA89C;\r\n                    }\r\n                </style>\r\n                </head>\r\n                <body style='background-color: #1FA89C; bgcolor: #1FA89C;' bgcolor='#1FA89C; border-radius:.25em;'>\r\n                    <div style='background-color: #1FA89C; bgcolor: #1FA89C;' bgcolor='#1FA89C'>\r\n                        <h1 style='text-align:center; color:white'; padding:10em; padding-top:2em;>Midwest DevOps, LLC</h1>\r\n                        <div style='padding:7em; color:white; text-align:center'>\r\n                            You have created an account at <a href='midwestdevops.com'>Midwest DevOps, LLC</a><br><br>\r\n                            Click <a href='https://localhost:44350/api/Registration/Verify?GUID=b8e8d9e7-1ccc-4cd3-9c23-de3f2aef9cb3&Application=825d53c9-df35-451f-b668-76b467e5f54b'>here</a> to activate your email<br><br><br><br>\r\n                            <p style='color:lightgrey'>If you didn't create this account, ignore this email</p>\r\n                        </div>\r\n                    </div>\r\n                </body>\r\n                </html>\r\n            "
+    }
+  ]
+}
+# 8/4/2021 12:10:08 AM #
+Exception Occured in MDO Utility
+The remote server returned an error: (404) Not Found.   at System.Net.HttpWebRequest.GetResponse()
+   at RESTServiceRequestor.RestClient.PostRequest(String json, Boolean urlEncode)
+   at MDO.ThirdParty.Spotify.Standard.EndPoints.AddTrackToEndOfQueueAPI.AddTrackToEndOfQueue(Int32 userID, String songURI)System.Net.RequestsSystem.Net.WebResponse GetResponse()
+# 8/4/2021 12:10:08 AM #
+{
+  "error" : {
+    "status" : 404,
+    "message" : "Player command failed: No active device found",
+    "reason" : "NO_ACTIVE_DEVICE"
+  }
+}
+# 8/15/2021 4:31:44 PM #
+Exception Occured in MDO Utility
+Table 'midwestdevops.permissions' doesn't exist   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at RESTDLL.Permissions.GetAllPermissions() in C:\MDO\Midwest DevOps Website\Development\RESTDLL\Permissions.cs:line 51
+   at RESTBLL.Permissions.GetAllPermissions() in C:\MDO\Midwest DevOps Website\Development\RESTBLL\Permissions.cs:line 28MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 8/15/2021 10:19:35 PM #
+Exception Occured in MDO Utility
+Unknown column 'externalapplicationID' in 'where clause'   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.GetResult(Int32 statementId, Int32& affectedRows, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteScalar()
+   at RESTDLL.ExternalApplication.SaveExternalApplication(ExternalApplication p) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\ExternalApplication.cs:line 115
+   at RESTBLL.ExternalApplications.SaveExternalApplication(ExternalApplication externalApplication) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\ExternalApplications.cs:line 64MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 8/15/2021 11:11:08 PM #
+Exception Occured in MDO Utility
+Unknown column 'PermissionID' in 'field list'   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteScalar()
+   at RESTDLL.ExternalApplication.SaveExternalApplication(ExternalApplication p) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\ExternalApplication.cs:line 111
+   at RESTBLL.ExternalApplications.SaveExternalApplication(ExternalApplication externalApplication) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\ExternalApplications.cs:line 64MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 8/15/2021 11:11:36 PM #
+Exception Occured in MDO Utility
+Unknown column 'PermissionID' in 'field list'   at MySql.Data.MySqlClient.MySqlStream.ReadPacket()
+   at MySql.Data.MySqlClient.NativeDriver.GetResult(Int32& affectedRow, Int64& insertedId)
+   at MySql.Data.MySqlClient.Driver.NextResult(Int32 statementId, Boolean force)
+   at MySql.Data.MySqlClient.MySqlDataReader.NextResult()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteScalar()
+   at RESTDLL.ExternalApplication.SaveExternalApplication(ExternalApplication p) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\ExternalApplication.cs:line 111
+   at RESTBLL.ExternalApplications.SaveExternalApplication(ExternalApplication externalApplication) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\ExternalApplications.cs:line 64MySql.DataMySql.Data.MySqlClient.MySqlPacket ReadPacket()
+# 8/18/2021 4:01:05 AM #
+Exception Occured in MDO Utility
+Fatal error encountered during command execution.   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteScalar()
+   at RESTDLL.UserPermissions.SaveUserPermission(UserPermission p) in C:\MDO\Midwest DevOps Website\Development\RESTDLL\UserPermissions.cs:line 145
+   at RESTBLL.UserPermissions.SaveUserPermission(UserPermission userPermission) in C:\MDO\Midwest DevOps Website\Development\RESTBLL\UserPermissions.cs:line 82MySql.DataMySql.Data.MySqlClient.MySqlException (0x80004005): Parameter '@Active' must be defined.
+   at MySql.Data.MySqlClient.Statement.SerializeParameter(MySqlParameterCollection parameters, MySqlPacket packet, String parmName, Int32 parameterIndex)
+   at MySql.Data.MySqlClient.Statement.InternalBindParameters(String sql, MySqlParameterCollection parameters, MySqlPacket packet)
+   at MySql.Data.MySqlClient.Statement.BindParameters()
+   at MySql.Data.MySqlClient.PreparableStatement.Execute()
+   at MySql.Data.MySqlClient.MySqlCommand.ExecuteReader(CommandBehavior behavior)MySql.Data.MySqlClient.MySqlDataReader ExecuteReader(System.Data.CommandBehavior)
+# 8/19/2021 1:47:37 PM #
+Sending email request: {
+  "personalizations": [
+    {
+      "to": [
+        {
+          "name": null,
+          "email": "1998markmueller@gmail.com"
+        }
+      ]
+    }
+  ],
+  "from": {
+    "email": "noreply@midwestdevops.com"
+  },
+  "subject": "Verify Email - Midwest DevOps, LLC",
+  "content": [
+    {
+      "type": "text/html",
+      "value": "\r\n                <html xmlns='http://www.w3.org/1999/xhtml'>\r\n                <head>\r\n                <title>Registration - Midwest DevOps, LLC</title>\r\n                <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />\r\n                <meta http-equiv='X-UA-Compatible' content='IE=edge' />\r\n                <meta name = 'viewport' content='width=device-width, initial-scale=1.0 ' />\r\n                <style>\r\n                    body {\r\n                        background-color: #1FA89C;\r\n                        bgcolor: #1FA89C;\r\n                    }\r\n                </style>\r\n                </head>\r\n                <body style='background-color: #1FA89C; bgcolor: #1FA89C;' bgcolor='#1FA89C; border-radius:.25em;'>\r\n                    <div style='background-color: #1FA89C; bgcolor: #1FA89C;' bgcolor='#1FA89C'>\r\n                        <h1 style='text-align:center; color:white'; padding:10em; padding-top:2em;>Midwest DevOps, LLC</h1>\r\n                        <div style='padding:7em; color:white; text-align:center'>\r\n                            You have created an account at <a href='midwestdevops.com'>Midwest DevOps, LLC</a><br><br>\r\n                            Click <a href='https://localhost:44350/api/Registration/Verify?GUID=105574c7-fe9b-4fe8-acd2-a1a7c48da245&Application=825d53c9-df35-451f-b668-76b467e5f54b'>here</a> to activate your email<br><br><br><br>\r\n                            <p style='color:lightgrey'>If you didn't create this account, ignore this email</p>\r\n                        </div>\r\n                    </div>\r\n                </body>\r\n                </html>\r\n            "
+    }
+  ]
+}
+# 8/19/2021 1:49:52 PM #
+Sending email request: {
+  "personalizations": [
+    {
+      "to": [
+        {
+          "name": null,
+          "email": "1998markmueller@gmail.com"
+        }
+      ]
+    }
+  ],
+  "from": {
+    "email": "noreply@midwestdevops.com"
+  },
+  "subject": "Verify Email - Midwest DevOps, LLC",
+  "content": [
+    {
+      "type": "text/html",
+      "value": "\r\n                <html xmlns='http://www.w3.org/1999/xhtml'>\r\n                <head>\r\n                <title>Registration - Midwest DevOps, LLC</title>\r\n                <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />\r\n                <meta http-equiv='X-UA-Compatible' content='IE=edge' />\r\n                <meta name = 'viewport' content='width=device-width, initial-scale=1.0 ' />\r\n                <style>\r\n                    body {\r\n                        background-color: #1FA89C;\r\n                        bgcolor: #1FA89C;\r\n                    }\r\n                </style>\r\n                </head>\r\n                <body style='background-color: #1FA89C; bgcolor: #1FA89C;' bgcolor='#1FA89C; border-radius:.25em;'>\r\n                    <div style='background-color: #1FA89C; bgcolor: #1FA89C;' bgcolor='#1FA89C'>\r\n                        <h1 style='text-align:center; color:white'; padding:10em; padding-top:2em;>Midwest DevOps, LLC</h1>\r\n                        <div style='padding:7em; color:white; text-align:center'>\r\n                            You have created an account at <a href='midwestdevops.com'>Midwest DevOps, LLC</a><br><br>\r\n                            Click <a href='https://localhost:44350/api/Registration/Verify?GUID=8e452ec6-6d60-47c8-9af7-83683a01392f&Application=825d53c9-df35-451f-b668-76b467e5f54b'>here</a> to activate your email<br><br><br><br>\r\n                            <p style='color:lightgrey'>If you didn't create this account, ignore this email</p>\r\n                        </div>\r\n                    </div>\r\n                </body>\r\n                </html>\r\n            "
+    }
+  ]
+}
+# 9/25/2021 3:23:26 PM #
+Couldn't find username by: mark.mueller
+# 1/25/2022 9:10:20 PM #
+Exception Occured in MDO Utility
+Unable to connect to any of the specified MySQL hosts.   at MySql.Data.MySqlClient.NativeDriver.Open()
+   at MySql.Data.MySqlClient.Driver.Open()
+   at MySql.Data.MySqlClient.Driver.Create(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.MySqlPool.CreateNewPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.GetPooledConnection()
+   at MySql.Data.MySqlClient.MySqlPool.TryToGetDriver()
+   at MySql.Data.MySqlClient.MySqlPool.GetConnection()
+   at MySql.Data.MySqlClient.MySqlConnection.Open()
+   at RESTDLL.Permissions.GetAllPermissions() in C:\MDO\Midwest DevOps Website\Development\RESTDLL\Permissions.cs:line 49
+   at RESTBLL.Permissions.GetAllDBPermissions() in C:\MDO\Midwest DevOps Website\Development\RESTBLL\Permissions.cs:line 58MySql.DataSystem.Threading.ThreadAbortException: System error.
+   at System.Diagnostics.Debugger.CustomNotification(ICustomDebuggerNotification data)
+   at System.Diagnostics.Debugger.NotifyOfCrossThreadDependencySlow()
+   at System.Threading.Tasks.Task.InternalWaitCore(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
+   at System.Threading.Tasks.Task.Wait()
+   at MySql.Data.Common.StreamCreator.GetTcpStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.Common.StreamCreator.GetStream(MySqlConnectionStringBuilder settings)
+   at MySql.Data.MySqlClient.NativeDriver.Open()Void Open()
+# 2/14/2022 12:08:05 AM #
+Sending email request: {
+  "personalizations": [
+    {
+      "to": [
+        {
+          "name": null,
+          "email": "squawk773@gmail.com"
+        }
+      ]
+    }
+  ],
+  "from": {
+    "email": "noreply@midwestdevops.com"
+  },
+  "subject": "Verify Email - Midwest DevOps, LLC",
+  "content": [
+    {
+      "type": "text/html",
+      "value": "\r\n                <html xmlns='http://www.w3.org/1999/xhtml'>\r\n                <head>\r\n                <title>Registration - Midwest DevOps, LLC</title>\r\n                <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />\r\n                <meta http-equiv='X-UA-Compatible' content='IE=edge' />\r\n                <meta name = 'viewport' content='width=device-width, initial-scale=1.0 ' />\r\n                <style>\r\n                    body {\r\n                        background-color: #1FA89C;\r\n                        bgcolor: #1FA89C;\r\n                    }\r\n                </style>\r\n                </head>\r\n                <body style='background-color: #1FA89C; bgcolor: #1FA89C;' bgcolor='#1FA89C; border-radius:.25em;'>\r\n                    <div style='background-color: #1FA89C; bgcolor: #1FA89C;' bgcolor='#1FA89C'>\r\n                        <h1 style='text-align:center; color:white'; padding:10em; padding-top:2em;>Midwest DevOps, LLC</h1>\r\n                        <div style='padding:7em; color:white; text-align:center'>\r\n                            You have created an account at <a href='midwestdevops.com'>Midwest DevOps, LLC</a><br><br>\r\n                            Click <a href='https://localhost:44350/api/Registration/Verify?GUID=664f8830-6165-49c6-ad41-d281b8627b95&Application=825d53c9-df35-451f-b668-76b467e5f54b'>here</a> to activate your email<br><br><br><br>\r\n                            <p style='color:lightgrey'>If you didn't create this account, ignore this email</p>\r\n                        </div>\r\n                    </div>\r\n                </body>\r\n                </html>\r\n            "
+    }
+  ]
+}
+# 5/6/2022 6:00:45 PM #
+Sending email request: {
+  "personalizations": [
+    {
+      "to": [
+        {
+          "name": null,
+          "email": "1998markmueller@gmail.com"
+        }
+      ]
+    }
+  ],
+  "from": {
+    "email": "noreply@midwestdevops.com"
+  },
+  "subject": "Verify Email - Midwest DevOps, LLC",
+  "content": [
+    {
+      "type": "text/html",
+      "value": "\r\n                <html xmlns='http://www.w3.org/1999/xhtml'>\r\n                <head>\r\n                <title>Registration - Midwest DevOps, LLC</title>\r\n                <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />\r\n                <meta http-equiv='X-UA-Compatible' content='IE=edge' />\r\n                <meta name = 'viewport' content='width=device-width, initial-scale=1.0 ' />\r\n                <style>\r\n                    body {\r\n                        background-color: #1FA89C;\r\n                        bgcolor: #1FA89C;\r\n                    }\r\n                </style>\r\n                </head>\r\n                <body style='background-color: #1FA89C; bgcolor: #1FA89C;' bgcolor='#1FA89C; border-radius:.25em;'>\r\n                    <div style='background-color: #1FA89C; bgcolor: #1FA89C;' bgcolor='#1FA89C'>\r\n                        <h1 style='text-align:center; color:white'; padding:10em; padding-top:2em;>Midwest DevOps, LLC</h1>\r\n                        <div style='padding:7em; color:white; text-align:center'>\r\n                            You have created an account at <a href='midwestdevops.com'>Midwest DevOps, LLC</a><br><br>\r\n                            Click <a href='https://localhost:44350/api/Registration/Verify?GUID=abacdb1a-71a8-424d-bf47-7f53ce1b66ea&Application=825d53c9-df35-451f-b668-76b467e5f54b'>here</a> to activate your email<br><br><br><br>\r\n                            <p style='color:lightgrey'>If you didn't create this account, ignore this email</p>\r\n                        </div>\r\n                    </div>\r\n                </body>\r\n                </html>\r\n            "
+    }
+  ]
+}
+# 5/14/2022 5:21:08 PM #
+Exception Occured in MDO Utility
+The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at MDO.EmailHandler.Standard.EmailHandler.SendEmail(EmailAddresses fromAddress, String toAddress, String fromPassword, String subject, String body, Boolean isHtml)System.Net.MailVoid CheckResponse(System.Net.Mail.SmtpStatusCode, System.String)
+# 5/14/2022 5:21:45 PM #
+Exception Occured in MDO Utility
+The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at MDO.EmailHandler.Standard.EmailHandler.SendEmail(EmailAddresses fromAddress, String toAddress, String fromPassword, String subject, String body, Boolean isHtml)System.Net.MailVoid CheckResponse(System.Net.Mail.SmtpStatusCode, System.String)
+# 5/14/2022 5:27:09 PM #
+Exception Occured in MDO Utility
+The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at MDO.EmailHandler.Standard.EmailHandler.SendEmail(EmailAddresses fromAddress, String toAddress, String fromPassword, String subject, String body, Boolean isHtml)System.Net.MailVoid CheckResponse(System.Net.Mail.SmtpStatusCode, System.String)
+# 5/14/2022 5:28:37 PM #
+Exception Occured in MDO Utility
+The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at MDO.EmailHandler.Standard.EmailHandler.SendEmail(EmailAddresses fromAddress, String toAddress, String fromPassword, String subject, String body, Boolean isHtml)System.Net.MailVoid CheckResponse(System.Net.Mail.SmtpStatusCode, System.String)
+# 5/14/2022 5:30:26 PM #
+Exception Occured in MDO Utility
+The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at MDO.EmailHandler.Standard.EmailHandler.SendEmail(EmailAddresses fromAddress, String toAddress, String fromPassword, String subject, String body, Boolean isHtml)System.Net.MailVoid CheckResponse(System.Net.Mail.SmtpStatusCode, System.String)
+# 5/14/2022 5:35:00 PM #
+Exception Occured in MDO Utility
+The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at MDO.EmailHandler.Standard.EmailHandler.SendEmail(EmailAddresses fromAddress, String toAddress, String fromPassword, String subject, String body, Boolean isHtml)System.Net.MailVoid CheckResponse(System.Net.Mail.SmtpStatusCode, System.String)
+# 5/14/2022 5:36:30 PM #
+Exception Occured in MDO Utility
+The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Authentication Required. Learn more at   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.Send(SmtpConnection conn, Byte[] command, MailAddress from, Boolean allowUnicode)
+   at System.Net.Mail.SmtpTransport.SendMail(MailAddress sender, MailAddressCollection recipients, String deliveryNotify, Boolean allowUnicode, SmtpFailedRecipientException& exception)
+   at System.Net.Mail.SmtpClient.Send(MailMessage message)
+   at MDO.EmailHandler.Standard.EmailHandler.SendEmail(EmailAddresses fromAddress, String toAddress, String fromPassword, String subject, String body, Boolean isHtml)System.Net.MailVoid CheckResponse(System.Net.Mail.SmtpStatusCode, System.String)

@@ -1,0 +1,268 @@
+﻿@model MidwestDevOpsWebsite.Models.UserModel
+
+@{
+    ViewData["Title"] = "My Account";
+    ViewBag.Page = "Login";
+    var userSession = ((MDO.RESTDataEntities.Standard.UserSession)ViewBag.UserSession) ?? new MDO.RESTDataEntities.Standard.UserSession();
+
+
+    var userPermissions = (List<MDO.RESTDataEntities.Standard.UserPermission>)ViewBag.UserPermissions;
+
+    var canReadName = HasPermission(userPermissions, 36) || userSession.UserID == Model.UserID;
+    var canReadEmail = HasPermission(userPermissions, 34) || userSession.UserID == Model.UserID;
+
+    var canUpdateName = HasPermission(userPermissions, 37) || userSession.UserID == Model.UserID;
+    var canUpdateEmail = HasPermission(userPermissions, 35) || userSession.UserID == Model.UserID;
+    var canUpdatePassword = HasPermission(userPermissions, 33) || userSession.UserID == Model.UserID;
+    var canUpdateUsername = HasPermission(userPermissions, 40) || userSession.UserID == Model.UserID;
+
+    var canViewPermissions = HasPermission(userPermissions, MDO.RESTDataEntities.Standard.Permission.PermissionLookup.UserPermission.ViewAll);
+    var canUpdatePermissions = HasPermission(userPermissions, MDO.RESTDataEntities.Standard.Permission.PermissionLookup.UserPermission.CreateUpdate);
+}
+
+@functions {
+
+    public bool HasPermission(List<MDO.RESTDataEntities.Standard.UserPermission> perms, int permissionID)
+    {
+        var fieldCheck = perms.Where(x => x.PermissionID == permissionID).ToList();
+
+        if (fieldCheck.Any())
+        {
+            if (fieldCheck.Any(x => x.Active))
+            {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public string ReturnPasswordIfFalse(bool check)
+    {
+        if (check)
+        {
+            return "text";
+        }
+        else
+        {
+            return "password";
+        }
+    }
+}
+
+<div class="container-fluid bg-grey">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" style="background-color:white; border-radius:.25em; padding:2em;">
+            <h1>My Account</h1>
+            <hr />
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>User Information</h3>
+                    <hr />
+                    <form id="frmUserInfo">
+                        <input type="hidden" name="UUID" value="@Model.UUID" />
+                        <input type="hidden" name="UserID" value="@Model.UserID" />
+                        <div class="row" id="UserInfoValidation" style="display: none">
+                            <div class="col-sm-12">
+                                <div class="alert alert-danger" role="alert">
+                                    Username / password is incorrect
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username" name="Username" placeholder="Username" value="@Model.Username">
+                        </div>
+                        <span id="username_error" style="display:none; color:red"></span>
+
+                        <div class="form-group">
+                            <label for="firstname">First Name</label>
+                            <input type="@(ReturnPasswordIfFalse(canReadName))" class="form-control" id="firstname" name="FirstName" placeholder="First Name" value="@(canReadName ? Model.FirstName : "Stop peeking")">
+                        </div>
+                        <span id="username_error" style="display:none; color:red"></span>
+
+                        <div class="form-group">
+                            <label for="middlename">Middle Name</label>
+                            <input type="@(ReturnPasswordIfFalse(canReadName))"  class="form-control" id="middlename" name="MiddleName" placeholder="Middle Name" value="@(canReadName ? Model.MiddleName : "Stop peeking")">
+                        </div>
+                        <span id="username_error" style="display:none; color:red"></span>
+
+                        <div class="form-group">
+                            <label for="lastname">Last Name</label>
+                            <input type="@(ReturnPasswordIfFalse(canReadName))"  class="form-control" id="lastname" name="LastName" placeholder="Last Name" value="@(canReadName ? Model.LastName : "Stop peeking")">
+                        </div>
+                        <span id="username_error" style="display:none; color:red"></span>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="@(ReturnPasswordIfFalse(canReadEmail))"  class="form-control" id="email" name="Email" placeholder="Email" value="@(canReadEmail ? Model.Email : "Stop peeking")">
+                        </div>
+                        @if (canUpdateEmail || canUpdateName)
+                        {
+                            <div class="form-group">
+                                <button class="btn btn-primary float-right" type="submit" onclick="SubmitUserInfoForm(); return false;">Update</button>
+                            </div>
+                        }
+                        <span id="email_error" style="display:none; color:red"></span>
+                        <p>Account created on: @TimeZoneInfo.ConvertTimeFromUtc(Model.CreatedDate.Value, TimeZoneInfo.Local)</p>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <h3>Account Security</h3>
+                    <hr />
+                    <form id="frmSecurity">
+                        <input type="hidden" value="@Model.UUID" name="UUID" />
+                        <input type="hidden" name="UserID" value="@Model.UserID" />
+                        <div class="row" id="UserSecurityValidation" style="display: none">
+                            <div class="col-sm-12">
+                                <div class="alert alert-danger" role="alert">
+                                    Username / password is incorrect
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" name="Password" placeholder="Password" value="">
+                        </div>
+                        <span id="password_error" style="display:none; color:red"></span>
+                        <div class="form-group">
+                            <label for="retype-password">Retype Password</label>
+                            <input type="password" class="form-control" id="retype-password" name="RetypePassword" placeholder="Retype Password" value="">
+                        </div>
+                        <span id="retype-password_error" style="display:none; color:red"></span>
+                        @if (canUpdatePassword)
+                        {
+                            <div class="form-group">
+                                <button class="btn btn-primary float-right" type="submit" onclick="SubmitSecurityForm(); return false;">Change Password</button>
+                            </div>
+                        }
+                        <p>Last updated on: @TimeZoneInfo.ConvertTimeFromUtc(Model.ModifiedDate.Value, TimeZoneInfo.Local)</p>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Third Party Accounts</h3>
+                    <hr />
+                    <table class="table table-sm table-striped">
+                        @foreach (var thirdParty in Model.ThirdParties)
+                        {
+                            <tr>
+                                <td><b>@thirdParty.Name</b></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <img src="@thirdParty.IconUrl" class="img-fluid" style="width:50%" />
+                                </td>
+                                <td class="align-middle">
+                                    @thirdParty.Description
+                                </td>
+                                <td class="align-middle">
+                                    @if (Model.ThirdPartyUser.Any(x => x.ThirdPartyID == thirdParty.ThirdPartyID)) //Has connected to it
+                                    {
+                                        <button class="btn btn-outline-danger" type="button" onclick="window.location.href = '/ThirdParty/Remove/@(thirdParty.ThirdPartyID)'">Remove</button>
+                                    }
+                                    else
+                                    {
+                                        <button class="btn btn-outline-success" type="button" onclick="window.location.href = '@(thirdParty.AuthorizeUrl)'"><i style="color:#28a745" class="fas fa-plus"></i> Connect</button>
+                                    }
+                                </td>
+                            </tr>
+                        }
+                    </table>
+                </div>
+                <div class="col-md-6">
+                    @if (canViewPermissions)
+                    {
+                        <h3>User Permissions</h3>
+                        <hr />
+                        <div id="tree"></div>
+                        <div id="spinnerPerm" style="display:none; margin-right: .5em;" class="spinner-border text-primary float-right" role="status"></div>
+
+                        if (canUpdatePermissions)
+                        {
+                            <button class="btn btn-primary float-right" style="margin-top: .5em;" onclick="SavePerms();">Save</button>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <script>
+        function SubmitUserInfoForm() {
+            SubmitForm('#frmUserInfo', '/User/UserInfo', 'Post', '#UserInfoValidation', false, 'NULL');
+        }
+
+        function SubmitSecurityForm() {
+            SubmitForm('#frmSecurity', '/User/AccountSecurity', 'Post', '#UserSecurityValidation', true, 'NULL');
+        }
+
+        function ReloadPage() {
+            window.location = window.location;
+        }
+
+        var LoadPerms = @(canViewPermissions ? "true" : "false");
+
+        var permData = [];
+
+        function SavePerms() {
+            permData = [];
+
+            $('#spinnerPerm').show();
+
+            $('.chkPermission').each(function (i, e) {
+
+                var obj = {};
+                obj['id'] = parseInt($(e).attr('data-perm'));
+                obj['val'] = $(e).prop("checked");
+
+                permData.push(obj)
+
+                //console.log($(e).attr('data-perm') + ": " + $(e).prop("checked"));
+            });
+
+            $.ajax({
+                url: '/Permission/SaveUserPerms',
+                type: 'POST',
+                contentType: 'application/json',
+                dataType: 'JSON',
+                data: JSON.stringify({ userID: @(Model.UserID), data: permData }),
+                success: function (result) {
+                    HandleResponse(result);
+                    $('#spinnerPerm').hide();
+                },
+                error: function (result) {
+                    $('#spinnerPerm').hide();
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            if (LoadPerms) {
+                $.ajax({
+                    url: '/Permission/GetPermsForUser?userID=@(Model.UserID)',
+                    type: 'GET',
+                    dataType: 'JSON',
+                    contentType: 'application/json',
+                    success: function (result) {
+                        $('#tree').bstreeview({ data: result });
+                    },
+                    error: function (result) {
+
+                    }
+                });
+            }
+        });
+
+    </script>
+}

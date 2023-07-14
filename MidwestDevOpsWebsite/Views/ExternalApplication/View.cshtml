@@ -1,0 +1,142 @@
+﻿@model MDO.RESTDataEntities.Standard.ExternalApplication
+
+@{
+    ViewData["Title"] = "External App - " + Model.Name;
+    ViewBag.Page = "ExternalApplication";
+    var userSession = (MDO.RESTDataEntities.Standard.UserSession)ViewBag.UserSession;
+
+    var isMDOEmployee = ViewBag.UserSession != null && ViewBag.UserSession.IsMDOEmployee;
+    var isMDOAdmin = ViewBag.UserSession != null && ViewBag.UserSession.IsMDOAdmin;
+}
+
+<div class="container-fluid bg-grey">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10" style="background-color:white; border-radius:.25em; padding:2em;">
+            @if (Model.ID == null)
+            {
+                <h1>External Application - New</h1>
+            }
+            else
+            {
+                <h1>@Model.Name</h1>
+            }
+
+            <hr />
+            <br />
+            <br />
+            <div class="row">
+                <div class="col-md-6">
+                    <form id="frmLogin">
+                        <input type="hidden" name="ID" value="@Model.ID" />
+                        <div class="row" id="LoginValidation" style="display: none">
+                            <div class="col-sm-12">
+                                <div class="alert alert-danger" role="alert">
+                                    Username / password is incorrect
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="_name">Name</label>
+                            <input type="text" class="form-control" placeholder="Name" name="Name" id="_name" value="@Model.Name">
+                        </div>
+                        <span id="_name_error" style="display:none; color:red"></span>
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <input type="text" class="form-control" placeholder="Description" name="Description" id="description" value="@Model.Description">
+                        </div>
+                        <span id="description_error" style="display:none; color:red"></span>
+                        <div class="form-group">
+                            <button class="btn btn-success float-right" style="margin-left: .25em;" type="submit" onclick="SubmitLoginForm(); return false;">Save</button>
+                            <button class="btn btn-primary float-right" type="button" onclick="window.location = '/ExternalApplication/Index'; return false;">Back</button>
+                        </div>
+
+                        @if (Model.CreatedDate != new DateTime())
+                        {
+                            <p>Created on: @TimeZoneInfo.ConvertTimeFromUtc(Model.CreatedDate, TimeZoneInfo.Local)</p>
+                        }
+                    </form>
+
+                    <h3>Permissions</h3>
+                    <hr />
+                    <div id="tree"></div>
+                    <div id="spinnerPerm" style="display:none; margin-right: .5em;" class="spinner-border text-primary float-right" role="status"></div>
+
+                    @if (isMDOAdmin)
+                    {
+                        <button class="btn btn-primary float-right" style="margin-top: .5em;" onclick="SavePerms();">Save</button>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+
+        $(document).ready(function () {
+            Load();
+        });
+
+        function SubmitLoginForm() {
+            SubmitForm('#frmLogin', '/ExternalApplication/Update', 'Post', '#LoginValidation', false, 'GoBack');
+        }
+
+        function GoBack() {
+            window.location = '/ExternalApplication/Index';
+        }
+
+        function Load() {
+            $.ajax({
+                url: '/ExternalApplication/GetPermsForExternalApplication?externalApplicationID=@(Model.ID)',
+                type: 'GET',
+                dataType: 'JSON',
+                contentType: 'application/json',
+                success: function (result) {
+                    $('#tree').bstreeview({ data: result });
+                },
+                error: function (result) {
+
+                }
+            });
+        }
+
+        function SavePerms() {
+            permData = [];
+
+            $('#spinnerPerm').show();
+
+            $('.chkPermission').each(function (i, e) {
+
+                var obj = {};
+                obj['id'] = parseInt($(e).attr('data-perm'));
+                obj['val'] = $(e).prop("checked");
+
+                permData.push(obj)
+
+                //console.log($(e).attr('data-perm') + ": " + $(e).prop("checked"));
+            });
+
+            $.ajax({
+                url: '/ExternalApplication/SavePerms',
+                type: 'POST',
+                contentType: 'application/json',
+                dataType: 'JSON',
+                data: JSON.stringify({ externalApplicationID: @(Model.ID), data: permData }),
+                success: function (result) {
+                    HandleResponse(result);
+                    $('#spinnerPerm').hide();
+                },
+                error: function (result) {
+                    $('#spinnerPerm').hide();
+                }
+            });
+        }
+
+        function ReloadPage() {
+            window.location = window.location;
+        }
+    </script>
+}

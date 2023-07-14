@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <PackageLicenseFile>license.txt</PackageLicenseFile>
+    <Copyright>Midwest DevOps, LLC</Copyright>
+    <Description>MDO's Spotify wrapper to use for third party user authorization</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Company>Midwest DevOps, LLC</Company>
+    <Authors>Midwest DevOps, LLC</Authors>
+    <Version>1.0.12</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MDO.RESTServiceRequestor.Standard" Version="1.0.26" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="license.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
